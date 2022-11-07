@@ -1,0 +1,28 @@
+% ----------------------------------------------------
+% Recommendations
+% ----------------------------------------------------
+\documentclass[class=report,11pt,crop=false]{standalone}
+\input{../Style/ChapterStyle.tex}
+\input{../FrontMatter/Glossary.tex}
+\begin{document}
+% ----------------------------------------------------
+\chapter{Recommendations \label{ch:recommendations}}
+\vspace{-1cm}
+% ----------------------------------------------------
+The nature of this short project has left some interesting questions and opens up the opportunity for more work to be explored. It is hoped that the work completed in this report will spring forth new ideas and designs and that the failures outlined will be adequately fixed in future. The recommendations for further study are summarised briefly below.
+
+\begin{itemize}
+    \item Create a working \gls{pcb} of the system including the transmitter and receiver circuitry and the power supply.
+    \item Perform more tests on vehicles in the field to create a more accurate signal processing and circuit design.
+    \item Go through iterations of testing the signal processing and circuit (and further on the demonstrator) in the field to remove errors.
+    \item The system can be further worked on to allow continuous operation without a \gls{pc}, possibly with an Arduino or Rasperry Pi.
+    \item \textsc{MATLAB} code could be run on a Raspberry Pi or Arduino or exported into a lower-level language to work on a microprocessor.
+\end{itemize}
+
+% ----------------------------------------------------
+\ifstandalone
+\bibliography{../Bibliography/References.bib}
+\printnoidxglossary[type=\acronymtype,nonumberlist]
+\fi
+\end{document}
+% ----------------------------------------------------

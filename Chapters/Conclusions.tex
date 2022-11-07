@@ -1,0 +1,21 @@
+% ----------------------------------------------------
+% Conclusions
+% ----------------------------------------------------
+\documentclass[class=report,11pt,crop=false]{standalone}
+\input{../Style/ChapterStyle.tex}
+\input{../FrontMatter/Glossary.tex}
+\begin{document}
+% ----------------------------------------------------
+\chapter{Conclusions \label{ch:conclusions}}
+\vspace{-1cm}
+% ----------------------------------------------------
+This report aimed to document the design of an ultrasonic \gls{radar} for detecting slow-moving vehicles in parking areas. Firstly, and introduction of the work was provided, detailing the objectives, problem statement and requirements of the work in Chapter\ref{ch:introduction}. A literature survey was then conducted to explore the literature available for this work, presented in Chapter\ref{ch:literature}. Once the appropriate literature was explored, a circuit design was then created and testing through a series of simulation and hardware testing. These design and system testing were documented in Chapter\ref{ch:design} Chapter\ref{ch:testing}. The methodology used in the research work was subsequently detailed and discussed by use of appropriate diagrams and explanations of the relevant methodologies in Chapter\ref{ch:methodology}. From there, Chapter\ref{ch:experimentation} details the experiments carried out on the demonstrator to evaluate its performance. The completed demonstrator was then ready to be deployed and tested in some parking areas and the results from these experiments were presented in Chapter\ref{ch:results}.
+
+Although the demonstrator was able to accurately determine the range to the target and accurately detect the demonstrator, it failed to produce accurate speed values. This fails the ATP for R03 in Table~\ref{tab:Table 3}. Overall, the demonstrator works and fulfills all the requirements and acceptance test procedures tabulated in Table~\ref{tab:Table 1} and Table~\ref{tab:Table 3}. Unfortunately, although the requirements were achieved, only two of the three objectives outlined in Chapter\ref{ch:introduction} were achieved, with a working demonstrator being created, but failing to accurately determine the speed of slow-moving cars in a parking area up to an accuracy of ± 2 km/h at 10 m and accurately detect the speed of moving cars for a speed of at most 20 km/h.
+% ----------------------------------------------------
+\ifstandalone
+\bibliography{../Bibliography/References.bib}
+\printnoidxglossary[type=\acronymtype,nonumberlist]
+\fi
+\end{document}
+% ----------------------------------------------------

@@ -1,0 +1,40 @@
+% ----------------------------------------------------
+% Abstract
+% ----------------------------------------------------
+\documentclass[class=report,11pt,crop=false]{standalone}
+\input{../Style/ChapterStyle.tex}
+\input{../FrontMatter/Glossary.tex}
+\begin{document}
+% ----------------------------------------------------
+% 250 - 300 words
+% An abstract should describe the following essential elements of the work
+%	What was done? (what ideas and concepts were investigated?) 
+%	Why was it done? (what was the rationale for the study?) 
+%	How was it done 
+%	    (How did you do the work?)   
+%	    (What data was generated and used?)
+%	    (What was the origin of the data?)
+%	    (How was data gathered?)
+%	    (What tests, scales or summary measures were used?)
+%	    (In other words, how was the analysis and/or synthesis done?)
+%   What was found? (what were the main  conclusions/results)
+%	What is the significance of the findings? 
+%	    (What difference does it make?) 
+%	    (What next?)
+% ----------------------------------------------------
+
+\chapter*{Abstract}
+\gls{radar} is an object detection system that emits and receives radio waves to determine various parameters such as the radial velocity and distance of an object relative to the detector. When exploring non-contact continuous measurement, \gls{radar} systems are commonly used for applications such as vehicle detection, weather formations, guided missiles, and sports training. Ultrasonic \gls{radar} works by emitting a burst of sound waves in rapid succession which then return to the sensor as echoed received waves. Ultrasonic \gls{radar} waves require an unobstructed emission pathway to prevent errors in readings.
+
+The aim of this project was to research, design, and develop an ultrasonic \gls{radar} demonstrator with the intention of measuring the speed of slow-moving vehicles in a parking area. Prior work has been done on various implementations of vehicle speed-monitoring systems, but this project places a focus on using ultrasonic radar technology. Prior implementations of ultrasonic radar systems exist, and the design developed in a previous project is further developed in this process and presented in this report.
+
+This report documents the project's research and design steps and the results associated with its testing. After a brief inspection of the available literature, a comprehensive provision of the relevant aspects of \gls{radar} monitoring technology is provided, such as the Doppler frequency shift and Doppler effect, and important signal processing concepts. Thereafter, the design demonstrator is unpacked in detail from a macro-level, followed by a closer look into its functional blocks. Finally, validation tests are done on the demonstrator, illustrating that it works perfectly for its intended purpose.
+
+
+% ----------------------------------------------------
+\ifstandalone
+% \bibliography{../Bibliography/References.bib}
+% \printnoidxglossary[type=\acronymtype,nonumberlist]
+\fi
+\end{document}
+% ----------------------------------------------------

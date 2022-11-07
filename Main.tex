@@ -1,0 +1,53 @@
+\documentclass[11pt]{report}
+\input{Style/ChapterStyle.tex}
+\usepackage{standalone} % Best loaded last in the preamble
+
+\input{FrontMatter/Glossary.tex}
+
+\begin{document}
+\renewcommand\bibname{References}
+
+\pagenumbering{roman}
+\input{FrontMatter/Title.tex}
+\input{FrontMatter/Declaration.tex}
+\input{FrontMatter/Acknowledgements.tex}
+\input{FrontMatter/Abstract.tex}
+\glsresetall
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\printnoidxglossary[type=\acronymtype,nonumberlist,title={Abbreviations}]
+\newpage
+
+\pagenumbering{arabic}
+
+\input{Chapters/Introduction.tex}
+%\input{Chapters/Theory.tex}
+\input{Chapters/Literature.tex}
+\input{Chapters/System Requirements.tex}
+\input{Chapters/Methodology}
+\input{Chapters/Design.tex}
+\input{Chapters/System Testing.tex}
+\input{Chapters/Experimentation.tex}
+\input{Chapters/Results}
+\input{Chapters/Conclusions.tex}
+\input{Chapters/Recommendations.tex}
+
+\newpage
+\renewcommand\refname{New References Header}
+\bibliography{Bibliography/References.bib}
+
+
+\appendix
+\input{Appendices/Repositories.tex}
+\input{Appendices/Bill of Materials.tex}
+
+\chapter{Ethics Form}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.77\linewidth]{Appendices/ethics-form.pdf}
+\end{figure}
+
+\end{document}

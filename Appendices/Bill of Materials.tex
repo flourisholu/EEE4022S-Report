@@ -1,0 +1,47 @@
+% ----------------------------------------------------
+% Bill of Materials
+% ----------------------------------------------------
+\documentclass[class=report,11pt,crop=false]{standalone}
+\input{../Style/ChapterStyle.tex}
+\begin{document}
+% ----------------------------------------------------
+\chapter{Bill of Materials\label{sect:bill-of-materials}}
+% ----------------------------------------------------
+\begin{table}[htbp]
+\centering
+\caption{\label{tab:Table 2} Bill of Materials for Ultrasonic Radar System}
+\vspace{-0.5cm}
+\begin{tabular}{|m{7em}|m{10em}|m{7em}|m{7em}|}
+\multicolumn{4}{l}{}\\
+\cline{1-4}
+Part name & Description & Value & Quantity\\\cline{1-4}
+Resistor & - & 1 k$\Omega$ & 2  \\\cline{1-4}
+Resistor & - & 12 k$\Omega$ & 13  \\\cline{1-4}
+Resistor & - & 120 k$\Omega$ & 2  \\\cline{1-4}
+Potentiometer & Trimpot & 10 k$\Omega$ & 2 \\\cline{1-4}
+Capacitor & Non-polarised or polarised & 100 $\mu$F & 3  \\\cline{1-4}
+Capacitor &Non-polarised or polarised & 330 pF & 4 \\\cline{1-4}
+Capacitor &Non-polarised or polarised & 100 pF & 2\\\cline{1-4}
+Capacitor &Non-polarised or polarised & 47 pF & 2 \\\cline{1-4}
+Capacitor &Non-polarised or polarised & 220 pF & 2 \\\cline{1-4}
+Capacitor &Non-polarised or polarised & 39 pF & 2 \\\cline{1-4}
+Capacitor &Non-polarised or polarised & 30 pF & 2 \\\cline{1-4}
+Capacitor & Polarised & 100 nF & 1  \\\cline{1-4}
+Schottky Diode & 1N5819 & - & 1  \\\cline{1-4}
+Operational Amplifier & MC33079P (Quad) & - & 2  \\\cline{1-4}
+Transmitter & Ultrasonic Barrel  & - & 1  \\\cline{1-4}
+Receiver & Ultrasonic Barrel & - & 1 \\\cline{1-4}
+Power Supply & 5V/12 V DC Supply & - & 1  \\\cline{1-4}
+Jumper Cable & -& - & 1 \\\cline{1-4}
+AUX Cable & -& - & 2  \\\cline{1-4}
+External Sound Card & XONAR U5 & - & 1  \\\cline{1-4}
+USB Cable & USB-B to USB-A & - & 1 \\\cline{1-4}
+\end{tabular}
+\end{table}
+% ----------------------------------------------------
+\ifstandalone
+% \bibliography{../Bibliography/References.bib}
+% \printnoidxglossary[type=\acronymtype,nonumberlist]
+\fi
+\end{document}
+% ----------------------------------------------------%

@@ -1,0 +1,122 @@
+% ----------------------------------------------------
+% DAB: Processing Chain Design
+% ----------------------------------------------------
+\documentclass[class=report,11pt,crop=false]{standalone}
+\input{../Style/ChapterStyle.tex}
+\input{../FrontMatter/Glossary.tex}
+\begin{document}
+\ifstandalone
+\tableofcontents
+\fi
+% ----------------------------------------------------
+\chapter{Results \label{ch:results}}
+\vspace{-1cm}
+% ----------------------------------------------------
+These tests were conducted in public areas and therefore required permission from security officers or building managers - this permission was granted, but people appearing in images were removed for privacy purposes regardless of permission received from the individual in question. Safety was important, so reflective safety vests were warn during all experiments. The results of the experiments carried out are tabulated in Table~\ref{tab:results}.
+
+\begin{table}[!htp]
+\centering
+\caption{\label{tab:results} Results from experiments conducte}
+\vspace{-0.5cm}
+\begin{tabular}{|m{5em}|m{5em}|m{5em}|m{5em}|m{5em}|m{5em}|m{5em}|}
+\multicolumn{7}{l}{}\\
+\cline{1-7}
+\hline
+&
+\multicolumn{3}{l|}{Indoors} &
+\multicolumn{3}{l|}{Outdoors} &
+\hline
+Car type & Speed (km/h) & Time (s) & Distance (m) & Speed (km/h) & Time (s) & Distance (m)\\ \cline{1-7}
+Small-to-medium car   & - & - & - & 0.24 & 5 & 15 \\ \cline{1-7}
+Small-to-medium car   & - & - & - & 0.0634 & 5 & 15 \\ \cline{1-7}
+Small-to-medium car   & - & - & - & 0.0526 & 5 & 15 \\ \cline{1-7}
+Small-to-medium car   & - & - & - & 0.0587 & 5 & 12 \\ \cline{1-7}
+Small-to-medium car   & - & - & - & 0.0591 & 5 & 10\\ \cline{1-7}
+Motorcycle  & - & - & - & 0.0588 & 5 & 10 \\ \cline{1-7}
+Bus   & - & - & - & 0.0587 & 5  & 10 \\ \cline{1-7}
+Bus   & - & - & - & 0.0578 & 10 & 15 \\ \cline{1-7}
+\end{tabular}
+\end{table}
+
+Figure~\ref{fig:vehicles} shows some of the vehicles used during the experiments. Then, the results presented in Table~\ref{tab:results} is discussed in the sections below.
+\begin{figure}[htbp]
+    \centering
+    \captionsetup{type=figure}
+    \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \def\svgwidth{1\linewidth}
+        {\scriptsize
+            \setstretch{0.7} % Line spacing
+            \includegraphics[width=6cm,height=6cm]{../Images/vehicles/1.jpg}}
+        \caption{Vehicle 1.}
+    \end{subfigure}
+    ~ 
+        \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \def\svgwidth{1\linewidth}
+        {\scriptsize
+            \setstretch{0.7} % Line spacing
+            \includegraphics[width=6cm,height=6cm]{../Images/vehicles/2.jpg}}
+        \caption{Vehicle 2.}
+    \end{subfigure}
+    ~     \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \def\svgwidth{1\linewidth}
+        {\scriptsize
+            \setstretch{0.7} % Line spacing
+            \includegraphics[width=6cm,height=6cm]{../Images/vehicles/3.jpg}}
+        \caption{Vehicle 3.}
+    \end{subfigure}
+    ~     \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \def\svgwidth{1\linewidth}
+        {\scriptsize
+            \setstretch{0.7} % Line spacing
+            \includegraphics[width=6cm,height=6cm]{../Images/vehicles/4.jpg}}
+        \caption{Vehicle 4.}
+    \end{subfigure}
+    ~     \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \def\svgwidth{1\linewidth}
+        {\scriptsize
+            \setstretch{0.7} % Line spacing
+            \includegraphics[width=6cm,height=6cm]{../Images/vehicles/5.jpg}}
+        \caption{Vehicle 5.}
+    \end{subfigure}
+    \caption{Some vehicles used for experiments.}
+\end{figure}
+
+\section{Speed}
+From the results in Table~\ref{tab:results}, it's not hard to notice that the speed values are off. In the case of the second and third small-to-medium car values, the speed recorded by the car's speedometer was 40 km/h and 18 km/h, respectively. These values do not correlate to that recorded by the demonstrator. This could, in effect, be an error on the side of the circuit, or an effect of incorrect signal processing techniques. However, the demonstrator is able to pick up the moving vehicle and provide a speed for the data collected.
+
+\section{Range}
+The range to the target is calculated using Equation~\ref{eqn:range} and the results displayed in Table~\ref{tab:range}.
+\begin{table}[!htp]
+\centering
+\caption{\label{tab:range} Range to target vehicles.}
+\vspace{-0.5cm}
+\begin{tabular}{|m{5em}|m{5em}|}
+\multicolumn{2}{l}{}\\
+\cline{1-2}
+Car type & Range (m) \\ \cline{1-2}
+Small-to-medium car  & 41.16\\ \cline{1-2}
+Small-to-medium car   & 10.87 \\ \cline{1-2}
+Small-to-medium car   &  9.02\\ \cline{1-2}
+Small-to-medium car   & 10.07\\ \cline{1-2}
+Small-to-medium car   & 10.14\\ \cline{1-2}
+Motorcycle  &  10.08\\ \cline{1-2}
+Bus   & 10.07\\ \cline{1-2}
+Bus   & 9.91\\ \cline{1-2}
+\end{tabular}
+\end{table}
+The values in Table~\ref{tab:range} are surprisingly accurate to the distance values shown in Table~\ref{tab:results}. These values can be deemed as satisfactory for this work.
+
+\section{Vehicle Size}
+A look at Table~\ref{tab:vehicle-sizes} and Table~\ref{tab:range} will show that the demonstrator is capable of detecting vehicles of varying sizes, including motorcycles, small-to-medium size vehicles and busses. This aligns with the earlier prediction that objects with a larger \gls{rcs} will be more detectable by the demonstrator. This shows that the demonstrator is satisfactory for detecting larger size objects such as vehicles.
+% ----------------------------------------------------
+\ifstandalone
+\bibliography{../Bibliography/References.bib}
+\printnoidxglossary[type=\acronymtype,nonumberlist]
+\fi
+\end{document}
+% ----------------------------------------------------

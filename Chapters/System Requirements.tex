@@ -1,0 +1,88 @@
+% ----------------------------------------------------
+% System Requirements
+% ----------------------------------------------------
+\documentclass[class=report,11pt,crop=false]{standalone}
+\input{../Style/ChapterStyle.tex}
+\input{../FrontMatter/Glossary.tex}
+\begin{document}
+% ----------------------------------------------------
+\chapter{System Requirements \label{ch:requirements}}
+\vspace{-1cm}
+% ----------------------------------------------------
+Based on the objectives defined in Chapter~\ref{ch:introduction}, a set of system requirements and specifications was defined and represented as user requirements, technical specifications of the system, and acceptance test procedures.
+
+\section{User Requirements}
+The user requirements represent the design from the perspective of the user needing it and specify qualities that the system should have. These requirements were defined with the potential users in mind and are defined in Table~\ref{tab:Table 1} below.
+% abstract - something someone requires/wants/needs
+% represents the design from the perspective of the user needing it
+% a quality the system should have
+% the user should...
+\begin{table}[!htp]
+\centering
+\caption{\label{tab:Table 1} User Requirements}
+\vspace{-0.5cm}
+\begin{tabular}{|m{7em}|m{12cm}|}
+\multicolumn{2}{l}{}\\
+\cline{1-2}
+Requirement ID  & Requirement\\ \cline{1-2}
+R01   & The user should be able to measure the speed of slow-moving vehicles \\ \cline{1-2}
+R02   & The user should be able to detect slow-moving vehicles within a suitable distance \\ \cline{1-2}
+R03   & The user should be able to easily view the estimated and reasonably accurate speed of the vehicle \\ \cline{1-2}
+R04   & The user should be able to easily use the demonstrator in an outdoor environment \\ \cline{1-2}
+R05   &  The user should be able to easily interact with the demonstrator and perform signal processing\\ \cline{1-2}
+R06   & The user should be able to easily customise system parameters \\ \cline{1-2}
+R07   & The user should be able to easily carry or move the demonstrator about \\ \cline{1-2}
+\end{tabular}
+\end{table}
+
+\section{Technical Specifications}
+The technical specifications represent the design from the perspective of the technical team; they features and the behaviour of the system. These specifications are defined in Table~\ref{tab:Table 2} below.\\
+% specific and testable
+% represents the design from the perspective of the technical team building it
+% describes features and behaviour of system
+% the system should...
+\begin{table}[htbp]
+\centering
+\caption{\label{tab:Table 2} Technical Specifications}
+\vspace{-0.5cm}
+\begin{tabular}{|m{7em}|m{7em}|m{10cm}|}
+\multicolumn{3}{l}{}\\
+\cline{1-3}
+Requirement ID  & Specification ID & Technical Specification\\ \cline{1-3}
+R01   & S01 & The system should use ultrasonic radar \gls{cw} waves, for transmitting and receiving, at a centre frequency of 40 kHz \\ \cline{1-3}
+R02   & S02 & The system should detect slow-moving vehicles within a 10 meter radius\\ \cline{1-3}
+R03   & S03 & The system should display the estimated speed of the vehicle on \textsc{MATLAB} to an accuracy of within $\pm$2 km/h \\\cline{1-3}
+R04   & S04 & The demonstrator needs to have a robust enclosure for outdoor use \\ \cline{1-3}
+R05   & S05 & The system should be \gls{pc}-based for signal processing\\ \cline{1-3}
+R06   & S06 & The system should have a \textsc{MATLAB} \gls{gui} developed for customisation and processing \\ \cline{1-3}
+R07   & S07 & The system should be powered from a portable 12 V supply \\ \cline{1-3}
+\end{tabular}
+\end{table}
+
+\section{Acceptance Test Procedures}
+The Acceptance Test Procedures state how the technical specifications are tested and are defined in Table~\ref{tab:Table 3} below.
+% given X, when Person 1 does Y, the result should be Z
+\begin{table}[!htp]
+\centering
+\caption{\label{tab:Table 3} Acceptance Test Procedures}
+\vspace{-0.5cm}
+\begin{tabular}{|m{7em}|m{7em}|m{10cm}|}
+\multicolumn{3}{l}{}\\
+\cline{1-3}
+Requirement ID  & Test ID & Technical Specification\\ \cline{1-3}
+S01   & ATP01 & Successfully continuously transmits and receives ultrasonic waves at a centre frequency of 40 kHz\\ \cline{1-3}
+S02   & ATP02 & The demonstrator effectively detects the presence of vehicles within a radius of 10 metres \\ \cline{1-3}
+S03   & ATP03 & The demonstrator measures the speeds of slow-moving vehicles with an accuracy of $\pm$2 km/h, and displays the speed on \textsc{MATLAB} \\ \cline{1-3}
+S04   & ATP04 & The demonstrator is housed within a solid enclosure that is suitable for outdoor use \\ \cline{1-3}
+S05   & ATP05 & The demonstrator can be connected to and run from a laptop \\ \cline{1-3}
+S06   & ATP06 & The system parameters can be easily customised from an easy-to-follow \gls{gui} on \textsc{MATLAB}\\ \cline{1-3}
+S07   & ATP07 & The system is powered by a 12 V portable device \\ \cline{1-3}
+\end{tabular}
+\end{table}
+% ----------------------------------------------------
+\ifstandalone
+\bibliography{../Bibliography/References.bib}
+\printnoidxglossary[type=\acronymtype,nonumberlist]
+\fi
+\end{document}
+% ----------------------------------------------------
